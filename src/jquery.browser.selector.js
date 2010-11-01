@@ -1,8 +1,3 @@
-/**
- * jQuery Browser Selectors - Solução Cross-Browser para seletores CSS.
- * By Mateus Souza - www.mateussouza.com
- * @version 1.1
- */
 (function($){
 	
 	$.bodyClass = function(){
