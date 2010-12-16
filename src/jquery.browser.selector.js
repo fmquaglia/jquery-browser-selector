@@ -1,6 +1,6 @@
 (function($){
 	
-	$.bodyClass = function(){
+	$.browserSelector = function(){
 		
 		var browser, version = 'undefined';
 		var userAgent = navigator.userAgent.toLowerCase();
@@ -49,13 +49,11 @@
 			version += v;
 		}
 
-		$('body').addClass(browser+ ' '+ version);
+		$('html').addClass(browser + ' ' + version);
 		
 	};
 
-	//Inicia os processos automáticos
-	$('document').ready(function(){
-		$.bodyClass();
-	});
+	//Inicia automaticamente
+	$.browserSelector();
 	
 })(jQuery);
