@@ -3,21 +3,28 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   
-<title>jQuery Browser Selector Test Case - By Mateus Souza</title>
+	<title>jQuery Browser Selector Test Case - By Mateus Souza</title>
 
-<!-- JS -->
+	<!-- JS -->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-	<script type="text/javascript" src="../src/jquery.browser.selector.js"></script>
+	<script type="text/javascript" src="../jquery.browser.selector.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$('p:last').append($('html').attr('class'));
-		});
+	$(document).ready(function(){
+		
+		$(window).bind('resize', function(){
+		
+			$('p').text($('html').attr('class'));
+			
+		}).trigger('resize');
+		
+	});
 	</script>
 </head>
 
 <body>
 
-<p><b>Browser Class:</b> </p>
+	<h3>HTML classes <small>(try resize your browser)</small>:</h3>
+	<p></p>
 
 </body>
 </html>
