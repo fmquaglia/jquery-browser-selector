@@ -29,5 +29,7 @@ Download and insert this script in your page/project. Now go to developer!
 Build
 ------------
 
-To build you need [NodeJS + NPM + JSMin package](https://gist.github.com/866799). With this in hands go to terminal and run:
-	node Makefile.js
+To build you need [NodeJS + NPM + Tuild](https://gist.github.com/866799). With this in hands go to terminal and run:
+	
+	cd build/
+	node build.js

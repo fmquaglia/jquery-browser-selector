@@ -1,4 +1,4 @@
-/**
+/*!
  * jQuery Browser Selectors - The solution for special selectors
  * By Mateus Souza - http://mateussouza.com
  * @version 1.2
