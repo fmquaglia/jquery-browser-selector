@@ -7,12 +7,12 @@ CSS:
 	html{
 		background: #FFF;
 	}
-
+	
 	/*Only for IE7*/
 	html.ie-7{
 		background: red;
 	}
-
+	
 	/*Only for mac users in screen resolution 1650x1080*/
 	html.mac.screen-1680{
 		background: gray;
@@ -30,6 +30,6 @@ Build
 ------------
 
 To build you need [NodeJS + NPM + Tuild](https://gist.github.com/866799). With this in hands go to terminal and run:
-	
+
 	cd build/
 	node build.js

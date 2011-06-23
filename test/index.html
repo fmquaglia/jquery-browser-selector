@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  
+	
 	<title>jQuery Browser Selector Test Case - By Mateus Souza</title>
-
+	
 	<!-- JS -->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 	<script type="text/javascript" src="../jquery.browser.selector.js"></script>
@@ -12,7 +12,7 @@
 	$(document).ready(function(){
 		
 		$(window).bind('resize', function(){
-		
+			
 			$('p').text($('html').attr('class'));
 			
 		}).trigger('resize');
@@ -22,9 +22,9 @@
 </head>
 
 <body>
-
+	
 	<h3>HTML classes <small>(try resize your browser)</small>:</h3>
 	<p></p>
-
+	
 </body>
 </html>
