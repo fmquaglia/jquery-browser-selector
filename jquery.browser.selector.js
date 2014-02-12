@@ -15,15 +15,19 @@
       screens = [320, 480, 640, 768, 1024, 1280, 1440, 1680, 1920],
 
       os = /(mac|win|linux|freebsd|mobile|iphone|ipod|ipad|android|blackberry|j2me|webtv)/.exec(userAgent),
-      ua = /(ie|firefox|chrome|safari|opera)(?:.*version)?(?:[ \/])?([\w.]+)/.exec(userAgent);
+      ua = /(ie|firefox|chrome|safari|opera)(?:.*version)?(?:[ \/]+)([\w.]+)/.exec(userAgent);
 
     $(html).addClass(os[1] + ' ' + ua[1]);
 
     /**
      * Fix Safari
      */
-    if (ua[1] == 'safari') $(html).addClass(ua[1] + '-' + ua[2].substring(0, 1));
-    else $(html).addClass(ua[1] + '-' + parseInt(ua[2]));
+    if (ua[1] == 'safari') {
+      var version = /(?:.*version)?(?:[ \/]+)([\w.]+)/.exec(userAgent);
+      $(html).addClass(ua[1] + '-' + version[1].substring(0, 1));
+    } else {
+      $(html).addClass(ua[1] + '-' + parseInt(ua[2]));
+    }
 
     /**
      * IE conditional
