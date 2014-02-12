@@ -17,6 +17,16 @@
       os = /(mac|win|linux|freebsd|mobile|iphone|ipod|ipad|android|blackberry|j2me|webtv)/.exec(userAgent),
       ua = /(ie|firefox|chrome|safari|opera)(?:.*version)?(?:[ \/]+)([\w.]+)/.exec(userAgent);
 
+    /**
+     *  Fix IE 11
+     */
+    if(ua === null) {
+      ua = /(trident)(?:.*rv\:)?([\w]+)/.exec(userAgent);
+      if (ua[1] === 'trident') {
+        ua[1] = 'ie';
+      }
+    }
+
     $(html).addClass(os[1] + ' ' + ua[1]);
 
     /**
