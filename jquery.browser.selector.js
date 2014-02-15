@@ -15,7 +15,17 @@
       screens = [320, 480, 640, 768, 1024, 1280, 1440, 1680, 1920],
 
       os = /(mac|win|linux|freebsd|mobile|iphone|ipod|ipad|android|blackberry|j2me|webtv)/.exec(userAgent),
-      ua = /(ie|firefox|chrome|safari|opera)(?:.*version)?(?:[ \/]+)([\w.]+)/.exec(userAgent);
+      ua = /(ie|firefox|chrome|safari|opera)(?:.*version)?(?:[ \/]+)(?:rv\:)?([\w.]+)/.exec(userAgent);
+
+    /**
+     *  Fix IE 11
+     */
+    if(ua === null) {
+      ua = /(trident)(?:.*rv\:)?([\w]+)/.exec(userAgent);
+      if (ua[1] === 'trident') {
+        ua[1] = 'ie';
+      }
+    }
 
     /**
      *  Fix IE 11
